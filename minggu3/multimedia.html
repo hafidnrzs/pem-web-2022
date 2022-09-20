@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multimedia - HTML 5</title>
+	</head>
+	<body>
+		<!-- Ini dibuat di lab D.3.M tanggal 20 September 2022 -->
+		<h2>Belajar Multimedia - HTML 5</h2>
+		<p>
+		<button onclick="playVid()" type="button">Play Video</button>
+		<button onclick="pauseVid()" type="button">Pause Video</button>
+		<button onclick="durationVid()" type="button">Duration Video</button>
+		<button onclick="enableControls()" type="button">Enable controls</button>
+		<button onclick="disableControls()" type="button">Disable controls</button>
+		<button onclick="checkControls()" type="button">Check controls status</button>
+		</p>
+		<video width="420" id="myVideo">
+			<source src="media/movie.mp4" type="video/mp4">
+			<source src="media/movie.ogg" type="video/ogg">
+			Browser not support...
+		</video><br>
+		<audio controls>
+			<source src="media/horse.ogg" type="audio/ogg">
+		</audio>
+	</body>
+	<script>
+	var vid = document.getElementById("myVideo");
+	
+	function playVid() {
+		vid.play();
+		vid.loop = true;
+	}
+
+	function pauseVid() {
+		vid.pause();
+	}
+	function durationVid() {
+		alert(vid.duration);
+	}
+	function enableControls() {
+		vid.controls = true;
+		vid.load();
+	}
+	function disableControls() {
+		vid.controls = false;
+		vid.load();
+	}
+	function checkControls() {
+		alert(vid.controls);
+	}
+	</script>
+</html>
