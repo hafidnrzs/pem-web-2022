@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tugas Pemrograman Berbasis Web - Web Statis">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Hafid Nur">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - HTML5</title>
+    <link rel="stylesheet" href="media/style.css">
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="margin: 20px auto;">
+        <form name="fmhs" method="post" action="proses.php">
+            <table>
+                <tr>
+                    <td>NIM</td>
+                    <td><input type="number" name="fnim" required></td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td><input type="text" name="fnama" required></td>
+                </tr>
+                <tr>
+                    <td>Tgl Lhr</td>
+                    <td><input type="date" name="ftgllhr" required></td>
+                </tr>
+                <tr>
+                    <td>Program Studi</td>
+                    <td>
+                        <select name="fprodi" required>
+                            <option value="">Pilih Prodi</option>
+                            <option value="A11">S1 - Teknik Informatika</option>
+                            <option value="A12">S1 - Sistem Informasi</option>
+                            <option value="A22">D4 - Teknik Informatika</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bidang Minat</td>
+                    <td>
+                        <input type="checkbox" name="fbidang1" value="01"><label>Web Programming</label><br>
+                        <input type="checkbox" name="fbidang2" value="02"><label>Mobile Programming</label><br>
+                        <input type="checkbox" name="fbidang3" value="03"><label>Data Science</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Berkas CV</td>
+                    <td><input type="file" name="fberkas" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><input type="submit" name="fsubmit"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/hafidnrzs/">Instagram</a></li>
+            <li><a href="https://github.com/hafidnrzs">Github</a></li>
+        </ul>
+        <p>Copyright &copy; 2022 Hafid Nur Azis</p>
+    </footer>
+</body>
+
+</html>

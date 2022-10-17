@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tugas Pemrograman Berbasis Web - Web Statis">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Hafid Nur">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - HTML5</title>
+    <link rel="stylesheet" href="media/style.css">
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="margin: 20px auto;">
+        <article>
+            <h2>Video dari YouTube</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/N7iY-jNWeFc"></iframe>
+        </article>
+
+        <article>
+            <h2>Audio di web</h2>
+            <p>Lo-Fi autoplay, muted, dan loop</p>
+            <audio controls>
+                <source src="media/lofi.mp3" type="audio/mpeg">
+                Browsermu tidak mendukung tag audio
+            </audio>
+        </article>
+
+        <article>
+            <h2>Video dengan subtitle dan control Javascript</h2>
+            <video controls id="myVideo">
+                <source src="media/cat-herd.webm" type="video/webm">
+                <track src="media/cat-herd-id.vtt" kind="subtitles" srclang="id" label="Indonesia">
+            </video>
+            <p>
+                <button onclick="playVid()" type="button">Play Video</button>
+                <button onclick="pauseVid()" type="button">Pause Video</button>
+                <button onclick="durationVid()" type="button">Duration Video</button>
+                <button onclick="enableControls()" type="button">Enable controls</button>
+                <button onclick="disableControls()" type="button">Disable controls</button>
+                <button onclick="checkControls()" type="button">Check controls status</button>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/hafidnrzs/">Instagram</a></li>
+            <li><a href="https://github.com/hafidnrzs">Github</a></li>
+        </ul>
+        <p>Copyright &copy; 2022 Hafid Nur Azis</p>
+    </footer>
+    <script>
+        var vid = document.getElementById("myVideo");
+
+        function playVid() {
+            vid.play();
+            vid.loop = true;
+        }
+
+        function pauseVid() {
+            vid.pause();
+        }
+        function durationVid() {
+            alert(vid.duration);
+        }
+        function enableControls() {
+            vid.controls = true;
+            vid.load();
+        }
+        function disableControls() {
+            vid.controls = false;
+            vid.load();
+        }
+        function checkControls() {
+            alert(vid.controls);
+        }
+    </script>
+</body>
+
+</html>
