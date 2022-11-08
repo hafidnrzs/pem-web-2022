@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+header {
+	padding: 30px;
+	background-color: #ccc;
+	border: 1px solid green;
+	text-align: center;
+}
+
+nav {
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+nav ul {
+	list-style-type: none;
+	text-align: center;
+	background-color: #ccc;
+	border: 1px solid green;
+	display: block;
+	margin-top: 0;
+	padding: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+article {
+	float: left;
+	width: 80%;
+	background-color: #ccc;
+	border: 1px solid green;
+	padding: 0 20px;
+}
+
+foo ter {
+	text-align: center;
+	
+}
+
+.satu {
+	font-family: "Times New Roman", Times, serif;
+	color: blue;
+}
+
+.dua {
+	font-family: Arial, Helvetica, sans-serif;
+	color: brown;
+}
