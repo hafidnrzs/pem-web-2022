@@ -1,0 +1,6 @@
+h1 {
+  border: 5px solid #ddd;
+}
+h1:hover {
+  border-color: #999;
+}

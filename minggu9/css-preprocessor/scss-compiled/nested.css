@@ -1,0 +1,12 @@
+ul {
+  margin: 0;
+}
+ul li {
+  float: left;
+}
+ul a {
+  color: #999;
+}
+ul a:hover {
+  color: #229ed3;
+}
