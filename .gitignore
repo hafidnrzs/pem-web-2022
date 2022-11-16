@@ -1,2 +1,5 @@
 # Ignore Visual Studio Code config files
 .vscode/*
+
+# Ignore folder percobaan dan latihan
+coba/
