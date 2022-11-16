@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operator Bitwise</title>
+    </head>
+    <body>
+        <script>
+            // berlaku untuk tipe data int, long, short, char, byte
+            // operator ini akan menghitung dari bit-ke-bit
+            var x = 4; // x = 00000100
+            var y = 3; // y = 00000011
+
+            // operator bitwise and
+            var hasil = x & y; // hasil = 00000000 = 0
+            document.write(`${x} & ${y} = ${hasil}<br>`);
+
+            // operator bitwise or
+            var hasil = x | y; // hasil = 00000111 = 7
+            document.write(`${x} | ${y} = ${hasil}<br>`);
+
+            // operator bitwise xor
+            var hasil = x ^ y; // hasil = 00000111 = 7
+            document.write(`${x} ^ ${y} = ${hasil}<br>`);
+
+            // operator negasi
+            var hasil = ~x; /* hasil = 11111011 = -5 (sign 2's complement)
+            penjelasan. 11111011 ke desimal = 251
+            maks 111111111 = 255
+            karena digit pertama nilainya 1. Jadi 255 - 251 = 4
+            jadi -1 - 4 = -5 */
+            document.write(`~${x} = ${hasil}<br>`);
+
+            // operator bitwise right shift >>
+            var hasil = x >> y;
+            // 00000100 >> 4 geser kanan bit 4 kali. 4 digit paling kanan hilang. Jadi 00000000 = 0
+            document.write(`${x} >> ${y} = ${hasil}<br>`);
+
+            // operator bitwise left shift
+            var hasil = x << y;
+            // 00000100 << 4 geser kiri bit 4 kali. 4 bit paling kiri hilang. Jadi 01000000 = 32
+            document.write(`${x} << ${y} = ${hasil}<br>`);
+
+        </script>
+    </body>
+</html>
