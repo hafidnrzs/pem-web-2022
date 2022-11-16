@@ -1,0 +1,19 @@
+// SASS Color Operations
+$color: #229ed3;
+$color1: $color;
+$color2: #fff;
+$amount: 1;
+
+body {
+    color:
+    saturate($color, $amount)
+    desaturate($color, $amount)
+    lighten($color, $amount)
+    darken($color, $amount)
+    adjust-hue($color, $amount)
+    opacify($color, $amount)
+    transparentize($color, $amount)
+    mix($color1, $color2, $amount)
+    grayscale($color)
+    complement($color)
+}

@@ -1,0 +1,17 @@
+// LESS If/Else Statements
+@color: #333;
+body { 
+    background-color: if((lightness(@color)>30%), black, white);
+}
+
+// or with mixins
+.mixin(@color) when (lightness(@color) > 30%) {
+    background-color: black;
+}
+.mixin(@color) when (lightness(@color) <= 30%) {
+    background-color: white;
+}
+
+p {
+    .mixin(#333);
+}

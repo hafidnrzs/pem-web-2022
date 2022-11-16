@@ -1,0 +1,12 @@
+// LESS Mixins
+.bordered (@width) {
+    border: @width solid #ddd;
+
+    &:hover {
+        border-color: #999;
+    }
+}
+
+h1 {
+    .bordered(5px);
+}

@@ -1,0 +1,12 @@
+// SASS Mixins
+@mixin bordered($width) {
+    border: $width solid #ddd;
+
+    &:hover {
+        border-color: #999;
+    }
+}
+
+h1 {
+    @include bordered(5px);
+}

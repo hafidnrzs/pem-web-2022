@@ -1,0 +1,13 @@
+// LESS Extends
+.block { margin: 10px 5px; }
+
+p {
+    &:extend(.block);
+    border: 1px solid #eee;
+}
+
+ul, ol {
+    &:extend(.block);
+    color: #333;
+    text-transform: uppercase;
+}

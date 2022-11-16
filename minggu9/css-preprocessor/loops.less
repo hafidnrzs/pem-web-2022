@@ -1,0 +1,12 @@
+// LESS Loop
+.loop(@counter) when (@counter > 0) {
+    .loop(@counter - 1);
+
+    .border-@{counter} {
+        border: 1px * @counter solid blue;
+    }
+}
+
+body {
+    .loop(2)
+}

@@ -1,0 +1,20 @@
+// LESS Color Operations
+@color: #229ed3;
+@color1: @color;
+@color2: #fff;
+@amount: 1;
+
+body {
+    color:
+    saturate(@color, @amount)
+    desaturate(@color, @amount)
+    lighten(@color, @amount)
+    darken(@color, @amount)
+    fadein(@color, @amount)
+    fadeout(@color, @amount)
+    fade(@color, @amount)
+    spin(@color, @amount)
+    mix(@color1, @color2, @amount)
+    grayscale(@color)
+    contrast(@color)
+}

@@ -1,0 +1,8 @@
+// SASS Loop
+body {
+    @for $i from 1px to 3px {
+        .border-#{$i} {
+            border: $i solid blue;
+        }
+    }
+}
