@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Ini dibuat di lab D.3.M tanggal 29 November 2022 -->
+<html>
+<head>
+    <title>Hello Javascript</title>
+</head>
+<body>
+    <h2>Data Nama Mahasiswa</h2>
+    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+        <input type="text" placeholder="Isikan Nama MHS" id="tambahNama">
+        <input type="submit" value="+">
+    </form>
+    <div id="counter">
+        <!-- Dinamis pakai javascript -->
+    </div>
+    <table border="1">
+        <thead>
+            <tr><td>Daftar Nama</td></tr>
+        </thead>
+        <tbody id="daftarNama">
+            <!-- Dinamis pakai javascript -->
+        </tbody>
+    </table>
+
+    <script>
+        var app = new function(){
+            this.el = document.getElementById('daftarNama');
+            this.mhs = ["Mawar", "Suci", "Bunga", "Ratna"];
+
+            this.barisAll = function(){
+                var data = '';
+                if(this.mhs.length > 0){
+                    for(i=0; i<this.mhs.length; i++){
+                        data += '<tr>';
+                        data += '<td>'+this.mhs[i]+'<input type="button" value="-" onclick="app.Del('+i+')"></td>';
+                        data += '</tr>';
+                    }
+                }
+                this.Count(this.mhs.length);
+                return this.el.innerHTML = data;
+            }
+
+            this.Count = function(data){
+                var count = document.getElementById('counter');
+                if(data){
+                    count.innerHTML = data + ' Mahasiswa';
+                } else {
+                    count.innerHTML = 'Data Kosong';
+                }
+            }
+            this.Add = function(){
+                if(tambahNama.value){
+                    this.mhs.push(tambahNama.value)
+                    app.barisAll();
+                }
+            }
+            this.Del = function(data){
+                this.mhs.splice(data,1);
+                app.barisAll();
+            }
+        }
+        app.barisAll();
+    </script>
+</body>
+</html>
