@@ -38,7 +38,8 @@
                         data += '<tr>';
                         data += '<td>'+ (i+1) +'</td>';
                         data += '<td>'+this.mhs[i]+'</td>';
-                        data += '<td><input type="button" value="-" onclick="app.Del('+i+')"></td>';
+                        data += '<td><input type="button" value="-" onclick="app.Del('+i+')">';
+                        data += '<input type="button" value="Upd" onclick="app.Upd('+i+')"></td>';
                         data += '</tr>';
                     }
                 }
@@ -60,8 +61,17 @@
                 }
             }
             this.Del = function(data){
-                this.mhs.splice(data,1);
-                app.refresh();
+                if(confirm("Apakah Anda yakin akan menghapus?")){
+                    this.mhs.splice(data,1);
+                    app.refresh();
+                }
+            }
+            this.Upd = function(data){
+                edit = prompt("Masukkan nama baru:");
+                if(edit){
+                    this.mhs[data] = edit;
+                    app.refresh();
+                }
             }
         }
         app.refresh();
