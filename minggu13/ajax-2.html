@@ -14,7 +14,7 @@
         <script>
             function loadContent(){
                 var xhr = new XMLHttpRequest();
-                var url = "http://localhost/pem-web-2022/minggu13/kode.json";
+                var url = "kode.json";
 
                 xhr.onloadstart = function(){
                     document.getElementById("button").innerHTML = "Loading...";
@@ -31,8 +31,10 @@
                         img.src = data.avatar_url;
                         var name = document.createElement("h3");
                         name.innerHTML = data.name;
+                        var email = document.createElement("p");
+                        email.innerHTML = data.email;
 
-                        document.getElementById("hasil").append(img, name);
+                        document.getElementById("hasil").append(img, name, email);
                         document.getElementById("button").innerHTML = "Done";
 
                         setTimeout(function(){

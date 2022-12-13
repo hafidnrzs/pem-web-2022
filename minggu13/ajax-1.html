@@ -8,13 +8,13 @@
     </head>
     <body>
         <h1>Tutorial Ajax</h1>
-        <div id="hasil"></div>
+        <pre><div id="hasil"></div></pre>
         <button onclick="loadContent()">Load Content</button>
 
         <script>
             function loadContent(){
                 var xhr = new XMLHttpRequest();
-                var url = "http://localhost/pem-web-2022/minggu13/kode.json";
+                var url = "kode.json";
                 xhr.onreadystatechange = function(){
                     if(this.readyState == 4 && this.status == 200){
                         document.getElementById("hasil").innerHTML = this.responseText;
